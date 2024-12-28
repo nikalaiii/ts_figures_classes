@@ -19,11 +19,11 @@ export class Triangle implements Figure {
     this.color = color;
 
     if (a <= 0 || b <= 0 || c <= 0) {
-      throw new Error('this is very bad trianlge');
+      throw new Error('Sides must be greater than zero.');
     }
 
     if (a + b <= c || a + c <= b || b + c <= a) {
-      throw new Error('this is very bad triangle');
+      throw new Error('The given sides do not form a valid triangle.');
     }
   }
 
@@ -47,7 +47,7 @@ export class Circle implements Figure {
     this.color = color;
 
     if (radius <= 0) {
-      throw new Error('this is very bad circle');
+      throw new Error('Radius must be greater than zero.');
     }
   }
 
@@ -69,7 +69,7 @@ export class Rectangle implements Figure {
     this.color = color;
 
     if (width <= 0 || height <= 0) {
-      throw new Error('this is very bad rectangle');
+      throw new Error('Width and height must be greater than zero.');
     }
   }
 
